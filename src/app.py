@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 @app.route("/")
-def index():W
+def index():
     print('--ENV BEGIN--')
     for k, v in os.environ.items():
         print(f'{k}={v}')
