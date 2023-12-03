@@ -6,10 +6,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    print(os.environ['HOME'])
-    print(os.environ['USER'])
-    print(os.environ['OS'])
-    print(os.environ['DB_NAME_TP'])
+    print(os.environ.get('OS'))
+    print(os.environ.get('DB_NAME_TP'))
     try:
         host_name = socket.gethostname()
         host_ip = socket.gethostbyname(host_name)
