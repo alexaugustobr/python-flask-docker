@@ -5,13 +5,13 @@ import os
 app = Flask(__name__)
 
 @app.route("/")
-def index():
+def index():W
     print('--ENV BEGIN--')
     for k, v in os.environ.items():
         print(f'{k}={v}')
     print('--ENV END--')
-    print('OS='+os.environ.get('OS'))
-    print('DB_NAME_TP='+os.environ.get('DB_NAME_TP'))
+    print('OS=',os.environ.get('OS'))
+    print('DB_NAME_TP=',os.environ.get('DB_NAME_TP'))
     try:
         host_name = socket.gethostname()
         host_ip = socket.gethostbyname(host_name)
