@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
+    print('--ENV BEGIN--')
+    for k, v in os.environ.items():
+        print(f'{k}={v}')
+    print('--ENV END--')
     print('OS='+os.environ.get('OS'))
     print('DB_NAME_TP='+os.environ.get('DB_NAME_TP'))
     try:
